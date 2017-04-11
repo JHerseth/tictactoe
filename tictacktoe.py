@@ -79,7 +79,9 @@ class TicTacToe(object):
 
         :param allmoves: a list of all moves done so far
         :param userinput: move to check
-        :return: True if valid move, False if invalid move
+        :return:    0 if input not a valid move
+                    -1 if the move has already been done
+                    1 if valid move
         """
         if userinput not in self.validmoves:
             return 0
@@ -101,6 +103,9 @@ class TicTacToe(object):
         return False
 
     def get_input(self):
+        """
+        Gets a new move from the user.
+        """
         userinput = ""
         try:
             userinput = int(input("Enter a position: "))
@@ -119,6 +124,9 @@ class TicTacToe(object):
 
 
 def main():
+    """
+    Main game loop
+    """
     finished = False
     t = TicTacToe()
     t.draw_board()
