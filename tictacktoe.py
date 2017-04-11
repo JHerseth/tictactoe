@@ -34,42 +34,42 @@ class TicTacToe(object):
         :return: This function does not return anything
         """
         if pos in self.x:
-            print("x", end='')
+            return "x"
         elif pos in self.o:
-            print("o", end='')
+            return "o"
         else:
-            print(" ", end='')
+            return " "
 
     def draw_board(self):
         """
-        Draw the Tick Tack Toe board
+        Draw the Tic Tac Toe board
         """
         print("-------------")
         # print first xo line
         print("| ", end='')
-        self.draw_pos(7)
+        print(self.draw_pos(7), end='')
         print(" | ", end='')
-        self.draw_pos(8)
+        print(self.draw_pos(8), end='')
         print(" | ", end='')
-        self.draw_pos(9)
+        print(self.draw_pos(9), end='')
         print(" |", end='\n')
         print("-------------")
         # print second xo line
         print("| ", end='')
-        self.draw_pos(4)
+        print(self.draw_pos(4), end='')
         print(" | ", end='')
-        self.draw_pos(5)
+        print(self.draw_pos(5), end='')
         print(" | ", end='')
-        self.draw_pos(6)
+        print(self.draw_pos(6), end='')
         print(" |", end='\n')
         print("-------------")
         # print third xo line
         print("| ", end='')
-        self.draw_pos(1)
+        print(self.draw_pos(1), end='')
         print(" | ", end='')
-        self.draw_pos(2)
+        print(self.draw_pos(2), end='')
         print(" | ", end='')
-        self.draw_pos(3)
+        print(self.draw_pos(3), end='')
         print(" |", end='\n')
         print("-------------")
 
@@ -79,9 +79,9 @@ class TicTacToe(object):
 
         :param allmoves: a list of all moves done so far
         :param userinput: move to check
-        :return:    0 if input not a valid move
+        :return:     1 if valid move
+                     0 if input not a valid move
                     -1 if the move has already been done
-                    1 if valid move
         """
         if userinput not in self.validmoves:
             return 0
