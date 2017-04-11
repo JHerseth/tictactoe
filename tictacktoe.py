@@ -31,7 +31,7 @@ class TicTacToe(object):
                      -----------
                     | 1 | 2 | 3 |
                      -----------
-        :return: This function does not return anything
+        :return: returns the value (x, o or blank) for each position
         """
         if pos in self.x:
             return "x"
