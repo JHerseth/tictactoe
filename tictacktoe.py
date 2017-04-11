@@ -20,8 +20,8 @@ class TicTacToe(object):
 
     def draw_pos(self, pos):
         """
-        :param x: a list of moves X has done
-        :param o: a list of moves O has done
+        Draws X'es and O's in the different positions
+
         :param pos: the position to draw an X or O
                     Values from 1 to 9 as follows:
                      -----------
@@ -31,7 +31,7 @@ class TicTacToe(object):
                      -----------
                     | 1 | 2 | 3 |
                      -----------
-        :return:
+        :return: This function does not return anything
         """
         if pos in self.x:
             print("x", end='')
