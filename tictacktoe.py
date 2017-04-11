@@ -2,6 +2,7 @@
 A simple TicTacToe game
 
 TODO: AI
+Made by: Jonas Herseth
 """
 
 class TicTacToe(object):
